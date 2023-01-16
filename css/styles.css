@@ -15,6 +15,7 @@ img {
   width: 80%;
   height: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .btn {
   font-size: 20px;
@@ -111,6 +112,17 @@ header {
   margin-left: 50px;
   width: 50%;
 }
+.feature-title {
+  font-weight: 700;
+  font-size: 45px;
+  color: #131313;
+}
+.light-text {
+  color: #727272;
+}
+.color-text {
+  color: #ff900e;
+}
 .feature-info {
   line-height: 25px;
   margin: 20px 0;
@@ -123,12 +135,24 @@ header {
   justify-content: center;
   padding: 30px 0;
 }
+.experience-title::before {
+  width: 5px;
+  height: 106px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: #ff900e;
+  display: block;
+}
 .experience-title {
   font-size: 45px;
   color: #131313;
   font-weight: 700;
   margin: 15px 0;
   width: 400px;
+  position: relative;
+  padding-left: 20px;
 }
 .experience-discription {
   font-weight: 400;
@@ -143,8 +167,8 @@ header {
   padding: 10px 0;
 }
 .experience-content {
-  width: 80%;
-  margin-right: 54px;
+  width: 50%;
+  margin-right: 135px;
 }
 .single-experience {
   padding: 20px;
@@ -154,8 +178,25 @@ header {
   margin: 20px 0;
 }
 .experience-img {
-  width: 800px;
+  width: 50%;
   height: auto;
+  position: relative;
+}
+.experience-img img {
+  width: 100%;
+}
+.btn-secondary {
+  font-weight: 700;
+  font-size: 65px;
+  padding: 45px 40px;
+  position: absolute;
+  left: -70px;
+  bottom: -70px;
+}
+.btn-secondary span {
+  font-weight: 500;
+  font-size: 25px;
+  display: block;
 }
 /* fact section styles */
 .fact-title {
@@ -185,7 +226,16 @@ header {
   align-items: center;
   justify-content: center;
   margin: 20px 10px;
+  transition: o.2s all;
+  z-index: 0;
+  position: relative;
 }
+.single-box:hover {
+  z-index: 1;
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
 .single-box img {
   width: 45px;
   height: 45px;
@@ -232,6 +282,7 @@ header {
 }
 .single-brand img {
   width: 166px;
+  filter: grayscale(100%);
 }
 /* footer section styles */
 .footer {
@@ -245,6 +296,38 @@ header {
   font-size: 20px;
   color: #424242;
   padding: 10px;
+}
+
+/* sponspor member */
+.member-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+.single-img {
+  text-align: center;
+}
+.member-img img {
+  width: 200px;
+  height: 200px;
+}
+.member-name {
+  font-size: 30px;
+  font-size: 700;
+  margin: 10px 0;
+}
+.rank {
+  font-weight: 700;
+  font-size: 16px;
+  color: #727272;
+  display: block;
+}
+.company {
+  font-weight: 400;
+  font-size: 16px;
+  color: #727272;
+  display: block;
 }
 footer {
   padding-bottom: 50px;
