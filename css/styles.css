@@ -12,7 +12,8 @@ img {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
+  max-width: 1100px;
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -42,7 +43,7 @@ header {
 }
 .logo h1 {
   font-weight: 700;
-  font-size: 45px;
+  font-size: 2rem;
 }
 .logo a {
   text-decoration: none;
@@ -53,8 +54,6 @@ header {
 .nav-items ul {
   display: flex;
   list-style: none;
-}
-.nav-items ul li {
 }
 .nav-items ul li a {
   text-decoration: none;
@@ -70,11 +69,11 @@ header {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: 800px;
+  width: 80%;
   padding: 50px 0;
 }
 .banner-title {
-  font-size: 64px;
+  font-size: 3rem;
   color: #131313;
   font-weight: 700;
   text-align: center;
@@ -93,7 +92,7 @@ header {
   align-items: center;
   padding: 30px;
   justify-content: center;
-  width: 900px;
+  width: 90%;
 }
 .feature-img {
   display: grid;
@@ -146,7 +145,7 @@ header {
   display: block;
 }
 .experience-title {
-  font-size: 45px;
+  font-size: 3rem;
   color: #131313;
   font-weight: 700;
   margin: 15px 0;
@@ -277,6 +276,7 @@ header {
 }
 .sponspor-brand {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -301,6 +301,7 @@ header {
 /* sponspor member */
 .member-img {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   padding: 30px 0;
@@ -337,36 +338,76 @@ footer {
 =============================*/
 /* for mobile responsive */
 @media only screen and (max-width: 576px) {
-  /* navbar */
-  .nav-bar {
+  .logo h1 {
+    margin-left: 20px;
+  }
+  .nav-bar,
+  .feature,
+  .experience,
+  .boxs {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    padding: 20px 0;
+  }
+  .feature-content {
+    width: 100%;
+    margin-left: 0;
+    align-items: center;
+  }
+  .feature-title,
+  .feature-discription,
+  .fact-title,
+  .fact-discription,
+  .sponspor-title {
+    text-align: center;
+  }
+  .nav-bar {
     align-items: flex-start;
   }
   .nav-items ul {
     flex-direction: column;
-    margin-left: 0;
+    gap: 10px;
   }
-  .logo h1 {
-    font-weight: 700;
-    font-size: 40px;
-    margin-left: 20px;
-  }
-
-  .banner-content {
-    width: 100%;
-  }
-  .banner-title {
-    font-size: 40px;
-  }
-
-  /* feature section styles */
-  .feature {
-    display: flex;
+  .banner-image {
+    display: none;
   }
   .feature-img {
     grid-template-columns: repeat(1, 1fr);
   }
+  .experience-content {
+    width: 100%;
+    margin: 0;
+  }
+  .experience-img {
+    width: 80%;
+    text-align: center;
+  }
+  .btn-secondary {
+    left: 0;
+    bottom: 0;
+    font-size: 2rem;
+    padding: 10px 20px;
+    position: relative;
+    margin-top: 15px;
+  }
+  .fact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sponspor-brand {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .footer {
+    width: 70%;
+  }
 }
+
 .hide {
   display: none;
 }
